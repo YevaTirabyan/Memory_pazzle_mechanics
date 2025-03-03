@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccedy8svibr7p"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ux1nt"]
+[ext_resource type="Theme" uid="uid://0w2bmrlmg6n" path="res://resources/button_theme.tres" id="2_e1aoi"]
+[ext_resource type="Theme" uid="uid://7wddi5lklr8i" path="res://resources/play_button_theme.tres" id="3_kkh1m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ux1nt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -1.0
+offset_right = 521.0
+offset_bottom = 647.0
+color = Color(0.118581, 0.118581, 0.118581, 1)
+
+[node name="btn-1" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 202.0
+offset_right = 172.0
+offset_bottom = 320.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-2" type="Button" parent="."]
+offset_left = 198.0
+offset_top = 202.0
+offset_right = 316.0
+offset_bottom = 320.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-3" type="Button" parent="."]
+offset_left = 342.0
+offset_top = 202.0
+offset_right = 460.0
+offset_bottom = 320.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-4" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 338.0
+offset_right = 172.0
+offset_bottom = 456.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-5" type="Button" parent="."]
+offset_left = 198.0
+offset_top = 338.0
+offset_right = 316.0
+offset_bottom = 456.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-6" type="Button" parent="."]
+offset_left = 342.0
+offset_top = 338.0
+offset_right = 460.0
+offset_bottom = 456.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-7" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 474.0
+offset_right = 172.0
+offset_bottom = 592.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-8" type="Button" parent="."]
+offset_left = 198.0
+offset_top = 474.0
+offset_right = 316.0
+offset_bottom = 592.0
+theme = ExtResource("2_e1aoi")
+
+[node name="btn-9" type="Button" parent="."]
+offset_left = 342.0
+offset_top = 474.0
+offset_right = 460.0
+offset_bottom = 592.0
+theme = ExtResource("2_e1aoi")
+
+[node name="play-btn" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 133.0
+offset_bottom = 75.0
+theme = ExtResource("3_kkh1m")
+text = "Start"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="level-label" type="Label" parent="."]
+visible = false
+offset_left = 361.0
+offset_top = 90.0
+offset_right = 473.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.729412, 0, 0.207843, 1)
+theme_override_font_sizes/font_size = 26
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timer-label" type="Label" parent="."]
+visible = false
+offset_left = 360.0
+offset_top = 39.0
+offset_right = 472.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.729412, 0, 0.207843, 1)
+theme_override_font_sizes/font_size = 26
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="btn-1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="btn-2" to="." method="_on_btn_2_pressed"]
+[connection signal="pressed" from="btn-3" to="." method="_on_btn_3_pressed"]
+[connection signal="pressed" from="btn-4" to="." method="_on_btn_4_pressed"]
+[connection signal="pressed" from="btn-5" to="." method="_on_btn_5_pressed"]
+[connection signal="pressed" from="btn-6" to="." method="_on_btn_6_pressed"]
+[connection signal="pressed" from="btn-7" to="." method="_on_btn_7_pressed"]
+[connection signal="pressed" from="btn-8" to="." method="_on_btn_8_pressed"]
+[connection signal="pressed" from="btn-9" to="." method="_on_btn_9_pressed"]
+[connection signal="pressed" from="play-btn" to="." method="_on_playbtn_pressed"]
